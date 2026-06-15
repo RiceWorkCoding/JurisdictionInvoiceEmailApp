@@ -465,46 +465,6 @@ System automatically:
 
 # Known Issues
 
-## Invoice Management Suitelet
-
-Typographical error:
-
-```javascript
-vale: null
-```
-
-Should be:
-
-```javascript
-value: null
-```
-
----
-
-Stray character near error handling:
-
-```javascript
-... ${e.message}</div>`; A
-```
-
-Should be removed.
-
----
-
-## Invoice Preview Suitelet
-
-CSS syntax issue:
-
-```css
-size; A4;
-```
-
-Should be:
-
-```css
-size: A4;
-```
-
 ---
 
 ## Hardcoded Values
