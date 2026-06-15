@@ -360,7 +360,7 @@ define(['N/ui/serverWidget', 'N/record', 'N/log', 'N/search', 'N/file'],
                             log.debug('Uploaded File 2 Saved', `File ID: ${fileId}`);
                             rec.setValue({ fieldId: 'custrecord_invoice_recp_doc_2', value: fileId });
                         } else {
-                            rec.setValue({ fieldId: 'custrecord_invoice_recp_doc_2', vale: null});
+                            rec.setValue({ fieldId: 'custrecord_invoice_recp_doc_2', value: null});
                         }
                         if (uploadedFile3) {
                             uploadedFile3.folder = folderId;
@@ -422,7 +422,7 @@ define(['N/ui/serverWidget', 'N/record', 'N/log', 'N/search', 'N/file'],
                         id: 'custpage_error',
                         type: ui.FieldType.INLINEHTML,
                         label: ' '
-                    }).defaultValue = `<div style="color:red;">❌ Error saving record: ${e.message}</div>`; A
+                    }).defaultValue = `<div style="color:red;">❌ Error saving record: ${e.message}</div>`; 
                     response.writePage(form);
                 }
             }

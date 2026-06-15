@@ -110,7 +110,7 @@ define(['N/record', 'N/log'], function(record, log) {
                 <title>Invoice</title>
                 <style>
                     @page {
-                        size; A4;
+                        size: A4;
                         margin: 0.5in;
                     }
                     body { font-family: Arial, sans-serif; }
