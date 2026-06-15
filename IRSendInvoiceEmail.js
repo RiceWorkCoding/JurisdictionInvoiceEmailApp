@@ -345,24 +345,30 @@ define(['N/ui/serverWidget', 'N/record', 'N/log', 'N/search', 'N/file'],
                             folderId = folderRec.save();
                             rec.setValue({ fieldId: 'custrecord_file_cabinet_id', value: folderId });
                         }
-
                         if (uploadedFile) {
                             uploadedFile.folder = folderId;
                             const fileId = uploadedFile.save();
                             log.debug('Uploaded File 1 Saved', `File ID: ${fileId}`);
                             rec.setValue({ fieldId: 'custrecord_expenditure_report', value: fileId });
+                        } else{
+                            rec.setValue({ fieldId: 'custrecord_expenditure_report', value: null});
                         }
+
                         if (uploadedFile2) {
                             uploadedFile2.folder = folderId;
                             const fileId = uploadedFile2.save();
                             log.debug('Uploaded File 2 Saved', `File ID: ${fileId}`);
                             rec.setValue({ fieldId: 'custrecord_invoice_recp_doc_2', value: fileId });
+                        } else {
+                            rec.setValue({ fieldId: 'custrecord_invoice_recp_doc_2', vale: null});
                         }
                         if (uploadedFile3) {
                             uploadedFile3.folder = folderId;
                             const fileId = uploadedFile3.save();
                             log.debug('Uploaded File 3 Saved', `File ID: ${fileId}`);
                             rec.setValue({ fieldId: 'custrecord_invoice_recp_doc_3', value: fileId });
+                        } else {
+                            rec.setValue({ fieldId: 'custrecord_invoice_recp_doc_3', value: null});
                         }
                     }
 
